@@ -1,4 +1,6 @@
-$("#submit").on('click',function(){
+$("#submit").on('click',function(evt){
+
+    evt.preventDefault();
 
     var data={
         email: $('floatingInput').val(),
@@ -6,9 +8,13 @@ $("#submit").on('click',function(){
     };
 
     $.ajax({
-        url: 'https://api.h5.kevinmm.dk/login',
+        url: 'https://api.h5.kevinmm.dk/auth/login',
         type: 'POST',
         data: data,
-        success:console.log("success"),
+        success: function(data){
+            if (data.status == 'success') {
+                window.location.href = '';
+            }
+        },
     })
 })
