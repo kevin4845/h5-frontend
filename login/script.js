@@ -8,8 +8,8 @@ $("#submit").on('click',function(evt){
     };
 
     $.ajax({
-        //url: 'http://localhost:80/auth/login',
-        url: 'https://api.h5.kevinmm.dk/auth/login',
+        //url: 'http://localhost:80/login',
+        url: 'https://api.h5.kevinmm.dk/login',
         type: 'POST',
         data: data,
         success: function(data){
