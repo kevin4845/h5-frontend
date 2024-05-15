@@ -3,8 +3,8 @@ $("#submit").on('click',function(evt){
     evt.preventDefault();
 
     var data={
-        email: $('floatingInput').val(),
-        password: $('floatingPassword').val(),
+        email: $('#floatingInput').val(),
+        password: $('#floatingPassword').val(),
     };
 
     $.ajax({
