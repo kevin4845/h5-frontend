@@ -8,13 +8,12 @@ $("#submit").on('click',function(evt){
     };
 
     $.ajax({
-        url: 'https://api.h5.kevinmm.dk/auth/login',
+        url: 'http://localhost:80/auth/login',
+        // url: 'https://api.h5.kevinmm.dk/auth/login',
         type: 'POST',
         data: data,
         success: function(data){
-            if (data.status == 'success') {
-                window.location.href = '';
-            }
+            window.location.href = '/';
         },
     })
 })
