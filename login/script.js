@@ -11,7 +11,7 @@ function login(evt) {
 
     $.ajax({
         //url: 'http://localhost:80/api/auth/login',
-        url: 'https://api.h5.kevinmm.dk/auth/login',
+        url: 'https://api.h5.kevinmm.dk/api/auth/login',
         type: 'POST',
         headers: { 'Accept': '*/*'},
         data: data,
