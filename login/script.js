@@ -16,6 +16,8 @@ function login(evt) {
         headers: { 'Accept': '*/*'},
         data: data,
         success: function(data){
+            console.log(data.access_token);
+            document.cookie = "token="+data.access_token;
             window.location.href = '/';
         },
     })
