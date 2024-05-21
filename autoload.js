@@ -15,6 +15,8 @@ fetch("./partials/navbar.html")
   });
 
 
+var me;
+
 
 $.ajax({
   url: 'https://api.h5.kevinmm.dk/api/me',
@@ -25,7 +27,7 @@ $.ajax({
   },
   headers: { 'Accept': '*/*'},
   success: function(data) {
-
+    me = data;
   },
   error: function(data) {
     window.location.href = 'login.html';
