@@ -6,23 +6,22 @@ fetch("./partials/headers.html")
     document.getElementsByTagName("head")[0].innerHTML += data;
   });
 
-  function registrer(evt) {
+  function register(evt) {
 
     console.log("test");
 
     evt.preventDefault();
-    var password1 = document.getElementById("floatingPassword");
-    var password2 = document.getElementById("floatingPassword2");
-    if(password2 == password1){
+
     var data={
         email: $('#floatingInput').val(),
-        naven: $('floatingInputName').val(),
+        name: $('#floatingInputName').val(),
         password: $('#floatingPassword').val(),
+        password_confirmation: $('#floatingPassword2').val(),
     };
 
     $.ajax({
-        //url: 'http://localhost:80/api/auth/login',
-        url: 'https://api.h5.kevinmm.dk/register',
+        //url: 'http://localhost:80/api/auth/register',
+        url: 'https://api.h5.kevinmm.dk/api/auth/register',
         type: 'POST',
         headers: { 'Accept': '*/*'},
         data: data,
@@ -32,5 +31,5 @@ fetch("./partials/headers.html")
             window.location.href = '/';
         },
     })
-    }
+    
 }
