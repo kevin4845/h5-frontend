@@ -47,8 +47,8 @@ function fetchPosts() {
 
 function deletePost(id) {
     $.ajax({
-        url: `http://localhost/api/posts/${id}`,
-        //url: `https://api.h5.kevinmm.dk/api/posts/${id}`,
+        //url: `http://localhost/api/posts/${id}`,
+        url: `https://api.h5.kevinmm.dk/api/posts/${id}`,
         type: 'DELETE',
         headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
         success: function() {
