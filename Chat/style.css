@@ -1,5 +1,13 @@
-.card-body{
-    background-color: grey;
-    border: 10px;
-    padding: 100%;
+.sidebar {
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
+.chat-list-item {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+.chat-list-item:hover {
+    background-color: #e9ecef;
 }
