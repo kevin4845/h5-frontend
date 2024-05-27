@@ -36,9 +36,9 @@ function updateProfile(){
         type: 'PUT',
         headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
         data:{
-            name: $('#name').val(),
-            role: $('#role').val(),
-            description: $('#description').val()
+            name: $('#updatedeName').val(),
+            role: $('#updatedeRole').val(),
+            description: $('#updatedeDescription').val()
         },
         success: function(){
             onBodyLoad();
