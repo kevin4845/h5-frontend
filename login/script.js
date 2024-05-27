@@ -18,7 +18,7 @@ function login(evt) {
         success: function(data){
             console.log(data.access_token);
             document.cookie = "token="+data.access_token;
-            window.location.href = '/';
+            window.location.href = '/mainPage.html';
         },
     })
 
