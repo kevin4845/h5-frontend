@@ -18,7 +18,7 @@ function onBodyLoad() {
 function fetchUser(id) {
     $.ajax({
         //url: 'http://localhost/api/users/'+id,
-        url: 'https://api.h5.kevinmm.dk/api/users'+id,
+        url: 'https://api.h5.kevinmm.dk/api/users/'+id,
         type: 'GET',
         headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
         success: function(data) {

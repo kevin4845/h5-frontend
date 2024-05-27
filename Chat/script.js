@@ -77,6 +77,7 @@ function sendMessage(user) {
         headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
         success: function() {
             fetchMessages(user);
+            $('#message').val('');
         }
     });
 }
