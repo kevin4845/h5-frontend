@@ -46,3 +46,6 @@ function updateProfile(){
         }
     });
 }
+function hideModal() {
+    $('#redigereProfilModal').modal('hide');
+}
