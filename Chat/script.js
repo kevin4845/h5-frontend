@@ -28,7 +28,7 @@ function fetchMessages(user) {
     $('#send-message-btn').html('');
     $.ajax({
         //url: 'http://localhost/api/messages',
-        url: 'https://api.h5.kevinmm.dk/api/users'+id,
+        url: 'https://api.h5.kevinmm.dk/api/messages',
         type: 'GET',
         data: { user_id: user.id },
         headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
