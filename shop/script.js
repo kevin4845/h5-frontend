@@ -33,7 +33,7 @@ function fetchPosts() {
                             <h5 class="card-title">${post.title}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">${post.price} DKK</h6>
                             <p class="card-text">${post.description}</p>
-                            ${me.id == post.user_id ? '' : '<button type="button" class="btn btn-primary">Kontakt Sælger</button>'}
+                            ${me.id == post.user_id ? '' : `<button onclick="openChat(${post.user_id})" type="button" class="btn btn-primary">Kontakt Sælger</button>`}
                             ${me.id == post.user_id ? `<button onclick="deletePost(${post.id})" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>` : ''}
                             </div>
                         </div>
@@ -42,6 +42,11 @@ function fetchPosts() {
             });
         }
     });
+
+}
+
+function openChat(user_id) {
+    window.location.href = '/chat.html?user_id='+user_id;
 
 }
 

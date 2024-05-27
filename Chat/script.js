@@ -1,5 +1,18 @@
 function onBodyLoad() {
     fetchUsers();
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.get('user_id')) {
+        $.ajax({
+            //url: 'http://localhost/api/users/'+urlParams.get('user_id'),
+            url: 'https://api.h5.kevinmm.dk/api/users/'+urlParams.get('user_id'),
+            type: 'GET',
+            headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
+            success: function(data) {
+                fetchMessages(data);
+            }
+        });
+    }
 }
 
 function fetchUsers() {
