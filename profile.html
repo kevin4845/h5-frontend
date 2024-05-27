@@ -19,5 +19,40 @@
         <h3 id="role"></h3>
         <h3 id="description"></h3>
     </div>
+    <div class="container">
+        <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#redigereProfilModal">
+            redigere profil
+        </button>
+    </div>
+    <div class="modal fade" id="redigereProfilModal" tabindex="-1" aria-labelledby="redigereProfilModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="redigereProfilModalLabel">redigere profil</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="name">navn</label>
+                            <input type="name" class="form-control" id="name" placeholder="navn">
+                        </div>
+                        <div class="form-group">
+                            <label for="role">rolle</label>
+                            <input type="role" class="form-control" id="role" placeholder="rolle">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">beskrivelse</label>
+                            <input type="description" class="form-control" id="description" placeholder="beskrivelse">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close">luk</button>
+                            <button onclick="updateProfile()" type="button" class="btn btn-primary">opdatere profil</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

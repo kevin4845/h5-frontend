@@ -18,7 +18,7 @@ function onBodyLoad() {
 function fetchUser(id) {
     $.ajax({
         //url: 'http://localhost/api/users/'+id,
-        url: 'https://api.h5.kevinmm.dk/api/users/'+id,
+        url: `https://api.h5.kevinmm.dk/api/users/`+id,
         type: 'GET',
         headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
         success: function(data) {
@@ -29,4 +29,20 @@ function fetchUser(id) {
         }
     });
 
+}
+function updateProfile(){
+    $.ajax({
+        url: `https://api.h5.kevinmm.dk/api/users/${me.id}`,
+        type: 'PUT',
+        headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
+        data:{
+            name: $('#name').val(),
+            role: $('#role').val(),
+            description: $('description').val()
+        },
+        success: function(){
+            onBodyLoad();
+            hideModal();
+        }
+    });
 }
