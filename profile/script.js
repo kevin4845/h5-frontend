@@ -38,7 +38,7 @@ function updateProfile(){
         data:{
             name: $('#name').val(),
             role: $('#role').val(),
-            description: $('description').val()
+            description: $('#description').val()
         },
         success: function(){
             onBodyLoad();
