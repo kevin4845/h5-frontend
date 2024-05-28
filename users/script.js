@@ -1,7 +1,18 @@
+/**
+ * Denne funktion navigerer til profil-siden for en given bruger.
+ * @param {number} id - Brugerens unikke ID.
+ */
 function showProfile(id) {
     window.location.href = 'profile.html?id='+id;
 }
 
+/**
+ * Denne funktion henter en liste over brugere fra API'et og viser dem på siden.
+ * Den bruger en Bearer-token gemt i en cookie til at autentificere anmodningen.
+ * Hver bruger vises i et kort med deres navn, rolle og beskrivelse.
+ * Hvert kort har også en "Chat" knap og en "Vis Profil" knap.
+ * "Vis Profil" knappen udløser showProfile funktionen, når den klikkes på.
+ */
 function fetchUsers() {
     $('#users').html('');
     $.ajax({
@@ -32,6 +43,10 @@ function fetchUsers() {
 
 }
 
+/**
+ * Denne funktion kaldes, når sidens body indlæses.
+ * Den udløser fetchUsers funktionen, som henter og viser brugerne.
+ */
 function onBodyLoad() {
     fetchUsers();
 }
