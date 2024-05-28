@@ -176,8 +176,8 @@ function addTimelinePoint() {
 
 function createTimeline() {
     $.ajax({
-        //url: `https://api.h5.kevinmm.dk/api/timelines`,
-        url: `http://localhost/api/timelines`,
+        url: `https://api.h5.kevinmm.dk/api/timelines`,
+        //url: `http://localhost/api/timelines`,
         type: 'POST',
         headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
         data:{
@@ -232,8 +232,8 @@ function editTimeline(id, start, end, title, description) {
 
 function saveTimeline(id) {
     $.ajax({
-        //url: `https://api.h5.kevinmm.dk/api/timelines/${id}`,
-        url: `http://localhost/api/timelines/${id}`,
+        url: `https://api.h5.kevinmm.dk/api/timelines/${id}`,
+        //url: `http://localhost/api/timelines/${id}`,
         type: 'PUT',
         headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
         data:{
@@ -251,8 +251,8 @@ function saveTimeline(id) {
 
 function deleteTimeline(id) {
     $.ajax({
-        //url: `https://api.h5.kevinmm.dk/api/timelines/${id}`,
-        url: `http://localhost/api/timelines/${id}`,
+        url: `https://api.h5.kevinmm.dk/api/timelines/${id}`,
+        //url: `http://localhost/api/timelines/${id}`,
         type: 'DELETE',
         headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
         success: function(){
