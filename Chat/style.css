@@ -1,6 +1,6 @@
 .sidebar {
     height: 100vh;
-    background-color: #a6a6a6;
+    background-color: #f1f1f1; /* Light grey color */
     padding-top: 20px;
 }
 .chat-list-item {
@@ -9,5 +9,5 @@
     border-bottom: 1px solid #e9ecef;
 }
 .chat-list-item:hover {
-    background-color: #c0c0c0;
+    background-color: #e9ecef;
 }
