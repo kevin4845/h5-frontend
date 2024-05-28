@@ -25,7 +25,7 @@ $.ajax({
   data: {
     token: document.cookie.split("=")[1]
   },
-  headers: { 'Accept': '*/*'},
+  headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
   success: function(data) {
     me = data;
   },
