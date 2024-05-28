@@ -7,7 +7,7 @@
 .chat-list-item {
     cursor: pointer;
     padding: 10px;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid #c1cad2;
 }
 .chat-list-item:hover {
     background-color: #e9ecef;
