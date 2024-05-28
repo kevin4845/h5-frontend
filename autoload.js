@@ -19,8 +19,8 @@ var me;
 
 
 $.ajax({
-  //url: 'https://api.h5.kevinmm.dk/api/me',
-  url: 'http://localhost:80/api/me',
+  url: 'https://api.h5.kevinmm.dk/api/me',
+  //url: 'http://localhost:80/api/me',
   type: 'POST',
   data: {
     token: document.cookie.split("=")[1]

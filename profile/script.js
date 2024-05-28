@@ -31,8 +31,8 @@ function onBodyLoad() {
 function fetchUser(id) {
     if (id == null) {
         $.ajax({
-            //url: 'https://api.h5.kevinmm.dk/api/me',
-            url: 'http://localhost:80/api/me',
+            url: 'https://api.h5.kevinmm.dk/api/me',
+            //url: 'http://localhost:80/api/me',
             type: 'POST',
             data: {
               token: document.cookie.split("=")[1]
@@ -72,8 +72,8 @@ function fetchTimeline() {
     if (urlParams.get('id') === null) {
         
         $.ajax({
-            //url: 'https://api.h5.kevinmm.dk/api/me',
-            url: 'http://localhost:80/api/timelines',
+            url: 'https://api.h5.kevinmm.dk/api/timelines',
+            //url: 'http://localhost:80/api/timelines',
             type: 'GET',
             headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
             success: function(data) {
@@ -96,8 +96,8 @@ function fetchTimeline() {
         const id = urlParams.get('id');
 
         $.ajax({
-            //url: 'https://api.h5.kevinmm.dk/api/me',
-            url: 'http://localhost:80/api/timelines',
+            url: 'https://api.h5.kevinmm.dk/api/timelines',
+            //url: 'http://localhost:80/api/timelines',
             type: 'GET',
             data: { user_id: id },
             headers: { 'Authorization': 'Bearer ' + document.cookie.split("=")[1]},
